@@ -31,16 +31,17 @@ public class IUserMapperTest {
      */
     @Test
     public void testFindUserById() throws Exception {
-//        UserService userService = (UserService) applicationContext.getBean("userService");
-//        UserModel userModel = userService.findUserById(1);
+        UserService userService = (UserService) applicationContext.getBean(UserService.class);
+        UserModel userModel = userService.findUserById(1);
+        System.out.println(userModel.getAddress());
 
 //        IUserMapper iUserMapper = (IUserMapper) applicationContext.getBean("IUserMapper");
 //        UserModel userModel = iUserMapper.findUserById(1);
 //        System.out.print("输出:" + userModel.toString());
 
-        File f = new File("/Users/fanyafeng/IntelliJProject/SpringMybatisDemo/src/main/resources/apk/recreation_001.apk");
+        /*File f = new File("/Users/fanyafeng/IntelliJProject/SpringMybatisDemo/src/main/resources/apk/recreation_001.apk");
         String b = file2String(f, "GBK");
-        System.out.println(b);
+        System.out.println(b);*/
     }
 
     public static String file2String(File f, String charset) {
